@@ -51,7 +51,7 @@ public class ApplicationContext {
 
             for (Constructor<?> constructor : constructors) {   // 각 생성자 돌면서
                 if (constructor.getParameters().length > 0) {   // 파라미터가 있으면
-                    String beanName = Ut.str.lcfirst(clazz.getSimpleName());  //bean 이름 받고
+                    String beanName = Ut.str.lcfirst(clazz.getSimpleName());  // 파라미터 타입의 bean 이름 생성
                     Parameter[] parameters = constructor.getParameters();   // 생성자의 파라미터들 저장
                     Object[] args = new Object[parameters.length];  // 파라미터 개수만큼 args 배열 생성
 
